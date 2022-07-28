@@ -65,7 +65,7 @@ protected function getSlices(): array
 
 ![CakeCompositionChart](./images/screenshot-2.jpg)
 
-You can specify the size of the pie chart between `md`, `lg` and `xl`. (the default is `md`). In addition, you can choose to hide the label by setting `$showTotalLabel` property to `false`
+You can specify the size of the pie chart between `md`, `lg` and `xl`. (the default is `md`). In addition, you can choose to hide the label by setting `$showTotalLabel` property to `false`.
 
 ```php
 <?php
@@ -81,12 +81,6 @@ class CakeCompositionChart extends PieChartWidget
 
     public string $size = 'md';
 }
-```
-
-## Testing
-
-```bash
-composer test
 ```
 
 ## Changelog
