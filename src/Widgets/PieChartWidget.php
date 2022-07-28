@@ -39,8 +39,7 @@ abstract class PieChartWidget extends ChartWidget
 
                 return "{$slice->getHexColor()} {$startDegree}deg {$endDegree}deg";
             })
-            ->implode(',')
-        ;
+            ->implode(',');
     }
 
     abstract protected function getSlices(): array;

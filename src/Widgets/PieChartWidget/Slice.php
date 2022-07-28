@@ -2,9 +2,9 @@
 
 namespace JQHT\FilamentStaticChartWidgets\Widgets\PieChartWidget;
 
-use Illuminate\View\Component;
-use Illuminate\Contracts\View\View;
 use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Contracts\View\View;
+use Illuminate\View\Component;
 use JQHT\FilamentStaticChartWidgets\Contracts\HasValue;
 
 class Slice extends Component implements Htmlable, HasValue

@@ -8,7 +8,7 @@ use Spatie\LaravelPackageTools\Package;
 class FilamentStaticChartWidgetsServiceProvider extends PluginServiceProvider
 {
     protected array $styles = [
-        'filament-static-chart-widgets-styles' => __DIR__ . '/../public/css/styles.css',
+        'filament-static-chart-widgets-styles' => __DIR__.'/../public/css/styles.css',
     ];
 
     public function configurePackage(Package $package): void
@@ -20,7 +20,6 @@ class FilamentStaticChartWidgetsServiceProvider extends PluginServiceProvider
          */
         $package
             ->name('filament-static-chart-widgets')
-            ->hasViews()
-        ;
+            ->hasViews();
     }
 }
