@@ -30,7 +30,7 @@ use JQHT\FilamentStaticChartWidgets\Widgets\PieChartWidget\Slice;
 
 class CakeCompositionChart extends PieChartWidget
 {
-    protected function getHeading():string
+    protected function getHeading(): string
     {
         return 'Cake Composition';
     }
