@@ -1,3 +1,7 @@
+{{--
+    This file is only included so that TailwindCSS will pick
+    up the class names that used in the Component Class.
+--}}
 <div @class([
     'bg-slate-500',
     'bg-gray-500',
