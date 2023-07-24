@@ -2,14 +2,14 @@
 
 namespace JQHT\FilamentStaticChartWidgets;
 
-use Filament\PluginServiceProvider;
+use Filament\Support\Assets\Css;
+use Filament\Support\Facades\FilamentAsset;
 use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FilamentStaticChartWidgetsServiceProvider extends PluginServiceProvider
+class FilamentStaticChartWidgetsServiceProvider extends PackageServiceProvider
 {
-    protected array $styles = [
-        'filament-static-chart-widgets-styles' => __DIR__.'/../public/css/styles.css',
-    ];
+    public static string $name = 'filament-static-chart-widgets'
 
     public function configurePackage(Package $package): void
     {
@@ -19,7 +19,15 @@ class FilamentStaticChartWidgetsServiceProvider extends PluginServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('filament-static-chart-widgets')
+            ->name(static::$name)
+            ->hasAssets()
             ->hasViews();
+    }
+
+    public function packageBooted(): void
+    {
+        FilamentAsset::register([
+            Css::make(static::$name, __DIR__. '/../resources/dist/filament-static-chart-widgets.css'),
+        ], 'jonquihote/' . static::$name);
     }
 }
