@@ -2,8 +2,8 @@
     "name": "filament-static-chart-widgets",
     "private": true,
     "scripts": {
-        "build": "npx tailwindcss -i ./resources/css/styles.css -o ./public/css/styles.css",
-        "watch": "npx tailwindcss -i ./resources/css/styles.css -o ./public/css/styles.css --watch"
+        "build": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/filament-static-chart-widgets.css",
+        "watch": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/filament-static-chart-widgets.css --watch"
     },
     "devDependencies": {
         "tailwindcss": "^3.1.6"
