@@ -9,7 +9,7 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FilamentStaticChartWidgetsServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'filament-static-chart-widgets'
+    public static string $name = 'filament-static-chart-widgets';
 
     public function configurePackage(Package $package): void
     {
