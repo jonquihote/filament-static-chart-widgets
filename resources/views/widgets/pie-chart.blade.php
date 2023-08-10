@@ -1,12 +1,9 @@
 <x-filament::widget class="static-pie-chart-widget">
-    <x-filament::card>
-        <div class="flex items-center justify-between gap-8">
-            <x-filament::card.heading>
-            {{ $this->getHeading() }}
-            </x-filament::card.heading>
-        </div>
-
-        <hr />
+    <x-filament::section
+        :description="$description"
+        :heading="$heading"
+        class="fi-wi-chart"
+    >
 
         <div class="flex flex-col">
             <div class="flex items-center justify-center">
@@ -51,5 +48,5 @@
                 @endforeach
             </div>
         </div>
-    </x-filament::card>
+    </x-filament::section>
 </x-filament::widget>
