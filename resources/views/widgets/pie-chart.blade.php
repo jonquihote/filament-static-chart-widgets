@@ -1,5 +1,12 @@
+@php
+    $color = $this->getColor();
+    $heading = $this->getHeading();
+    $description = $this->getDescription();
+    $filters = $this->getFilters();
+@endphp
 <x-filament::widget class="static-pie-chart-widget">
     <x-filament::section
+        :description="$description"
         :heading="$heading"
         class="fi-wi-chart"
     >
