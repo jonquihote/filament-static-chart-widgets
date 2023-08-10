@@ -27,7 +27,7 @@ class FilamentStaticChartWidgetsServiceProvider extends PackageServiceProvider
     public function packageBooted(): void
     {
         FilamentAsset::register([
-            Css::make(static::$name, __DIR__. '/../resources/dist/filament-static-chart-widgets.css')->loadedOnRequest(),
+            Css::make(static::$name, __DIR__. '/../resources/dist/filament-static-chart-widgets.css'),
         ], 'jonquihote/' . static::$name);
     }
 }
