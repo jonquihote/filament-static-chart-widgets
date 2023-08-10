@@ -62,4 +62,9 @@ abstract class PieChartWidget extends ChartWidget
             return $slice;
         })->toArray();
     }
+
+    protected function getType(): string
+    {
+        return 'jqht-pie';
+    }
 }
