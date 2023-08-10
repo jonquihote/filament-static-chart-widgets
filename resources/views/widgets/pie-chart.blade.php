@@ -1,5 +1,4 @@
 @php
-    $color = $this->getColor();
     $heading = $this->getHeading();
     $description = $this->getDescription();
     $filters = $this->getFilters();
