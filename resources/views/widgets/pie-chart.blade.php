@@ -1,6 +1,5 @@
 <x-filament::widget class="static-pie-chart-widget">
     <x-filament::section
-        :description="$description"
         :heading="$heading"
         class="fi-wi-chart"
     >
