@@ -5,8 +5,9 @@ namespace JQHT\FilamentStaticChartWidgets\Support;
 use Filament\Widgets\Widget;
 use Illuminate\Support\Collection;
 use JQHT\FilamentStaticChartWidgets\Contracts\HasValue;
+use Filament\Widgets\ChartWidget as FilamentChartWidget;
 
-abstract class ChartWidget extends Widget
+abstract class ChartWidget extends FilamentChartWidget
 {
     public array $colors = [
         'slate' => 'bg-slate-500',
@@ -70,26 +71,10 @@ abstract class ChartWidget extends Widget
         'gray',
     ];
 
-    protected ?array $cachedData = null;
-
-    protected static ?string $heading = null;
-
     protected function getTotalValue(): int
     {
         return Collection::make($this->getCachedData())->sum(function (HasValue $item) {
             return $item->getValue();
         });
-    }
-
-    protected function getCachedData(): array
-    {
-        return $this->cachedData ??= $this->getData();
-    }
-
-    abstract protected function getData(): array;
-
-    protected function getHeading(): ?string
-    {
-        return static::$heading;
     }
 }
