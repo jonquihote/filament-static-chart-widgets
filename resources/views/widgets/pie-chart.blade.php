@@ -6,7 +6,7 @@
             </x-filament::card.heading>
         </div>
 
-        <x-filament::hr />
+        <hr />
 
         <div class="flex flex-col">
             <div class="flex items-center justify-center">
